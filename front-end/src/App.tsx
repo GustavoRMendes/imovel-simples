@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 function App () {
 
 
   return (
     <>
-      <h1>Imovel Simples</h1>
+      <h1>Imovel Simples <i className="bi bi-journal-text"></i></h1>
+
     </>
   )
 }
