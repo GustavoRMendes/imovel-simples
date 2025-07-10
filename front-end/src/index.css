@@ -1,25 +1,70 @@
 * {
   font-family: "Poppins";
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+p {
+  font-family: var(--font-text);
 }
 
 :root {
-  --cor-a: #e4771e;
-  --cor-b: #000;
-  --cor-c: #040212;
-  --cor-d: #2e2c3a;
-  --cor-e: #42414e;
-  --cor-f: #575662;
-  --cor-g: #23a863;
-  --cor-h: #038f4c;
-  --cor-i: #43c27a;
-  --cor-j: #e81111;
-  --cor-k: #f2f2f2;
-  --cor-l: #d2d2d2;
-  --cor-m: #ffffff;
-  --cor-n: #dedede;
+  /* Cores primárias */
+  --color-primary: #e4771e;
+
+  /* Cores neutras */
+  --color-black-1: #000000;
+  --color-black: #040212;
+  --color-gray-900: #2e2c3a;
+  --color-gray-800: #42414e;
+  --color-gray-700: #575662;
+  --color-gray-300: #bababa;
+  --color-gray-200: #d2d2d2;
+  --color-gray-100: #eaeaea;
+  --cor-gray-80: #dedede;
+  --cor-gray-60: #dcdcdc;
+  --color-gray-50: #f2f2f2;
+  --color-white: #ffffff;
+
+  /* Cores de feedback */
+  --color-success: #23a863;
+  --color-success-dark: #038f4c;
+  --color-success-light: #43c27a;
+  --color-error: #e81111;
+
+  /* Cores de texto */
+  --color-text: var(--color-gray-900);
+
+  /* Fontes */
+  --font-sans: "Inter", -apple-system, sans-serif;
+  --font-heading: "Poppins", "Inter", -apple-system, sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+  --font-text: "Roboto", "Inter", sans-serif;
+
+  /* Tamanhos de fonte */
+  --text-xxs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-md: 1.125rem; /* 18px */
+  --text-lg: 1.25rem; /* 20px */
+  --text-xl: 1.5rem; /* 24px */
+  --text-2xl: 1.75rem; /* 28px */
+  --text-3xl: 2rem; /* 32px */
+  --text-4xl: 2.5rem; /* 40px */
+  --text-5xl: 3rem; /* 48px */
+  --text-6xl: 3.75rem; /* 60px */
+
+  /* Pesos de fonte */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
 }
 
 @media (max-width: 320px) {
