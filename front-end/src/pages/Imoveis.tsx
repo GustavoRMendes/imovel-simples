@@ -1,3 +1,8 @@
+
 export default function Imoveis () {
-  return <h1>Bem-vindo à Página de Imóveis</h1>;
+  return (
+    <>
+      <h1>Imóveis</h1>
+    </>
+  )
 }
