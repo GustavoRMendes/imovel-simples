@@ -7,7 +7,7 @@ interface InfoCardProps {
   value: number;
   icon: string;
   textColor?: string;
-  barColor: 'success' | 'danger' | 'primary';
+  barColor: 'success' | 'danger';
 }
 
 const InfoCard = ({ title, value, icon, barColor }: InfoCardProps) => {
@@ -17,10 +17,10 @@ const InfoCard = ({ title, value, icon, barColor }: InfoCardProps) => {
         <div className={`card-bar bg-${barColor}`}></div>
         <div className="card-body d-flex align-items-center justify-content-between">
           <div>
-            <h5 className={`card-title mb-2 `}>{value}</h5>
-            <p className={`card-text mb-0 `}>{title}</p>
+            <h5 className={`font-number-card mb-2`}>{value}</h5>
+            <p className={`font-card mb-0`}>{title}</p>
           </div>
-          <div className="fs-2"><img src={icon} alt="" /></div>
+          <div className="fs-2"><img src={icon} alt="icon" /></div>
         </div>
       </div>
     </div>
