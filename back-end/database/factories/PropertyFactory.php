@@ -17,7 +17,10 @@ class PropertyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'floor' => fake(),
+            'contact' => $this->faker->phoneNumber(),
+            'status' => $this->faker->randomElement(['available', 'rented']),
         ];
     }
 }

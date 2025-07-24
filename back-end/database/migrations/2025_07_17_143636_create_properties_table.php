@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('floor');
             $table->string('contact');
-            $table->enum('status', ['available', 'rented', 'maintenance']);
+            $table->enum('status', ['available', 'rented']);
             $table->timestamps();
         });
     }
