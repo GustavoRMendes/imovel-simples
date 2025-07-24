@@ -10,6 +10,8 @@ import { Routes, Route } from 'react-router-dom';
 import Imoveis from './pages/Imoveis';
 import Clientes from './pages/Clientes';
 import Home from './pages/Home.tsx';
+import CadastrarCliente from './pages/CadastrarCliente.tsx';
+import CadastrarImovel from './pages/CadastrarImovel.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,6 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             <Route path="*" element={<Home />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/imoveis" element={<Imoveis />} />
+            <Route path="/cadastrar-cliente" element={<CadastrarCliente />} />
+            <Route path="/cadastrar-imovel" element={<CadastrarImovel />} />
           </Routes>
         </div>
       </div>
