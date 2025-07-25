@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('number');
             $table->enum('sex', ['male', 'female', 'other']);
             $table->date('birth_date');
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->enum('status', ['active', 'inactive']);
             $table->timestamps();
         });
     }

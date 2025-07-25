@@ -13,6 +13,6 @@ class RentalSeeder extends Seeder
      */
     public function run(): void
     {
-        Rental::factory()->create();
+        Rental::factory()->count(11)->create();
     }
 }

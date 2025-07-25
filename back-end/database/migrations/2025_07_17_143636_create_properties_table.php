@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('floor');
-            $table->string('contact');
-            $table->enum('status', ['available', 'rented']);
+            $table->enum('floor', ['1', '2']);
+            $table->enum('status', ['available', 'rented'])->default('available');
             $table->timestamps();
         });
     }
