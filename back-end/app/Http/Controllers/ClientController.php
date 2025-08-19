@@ -27,7 +27,10 @@ class ClientController extends Controller
 
         try {
             $client = Client::create($data);
-            return response()->json($client, 201);
+            return response()->json([
+                'message' => 'Cliente inserido com sucesso!',
+                'data' => $client
+            ], 201);
         } catch (\Exception $e) {
             return response()->json(['message' => 'Falha ao inserir cliente!'], 400);
         }
@@ -56,11 +59,17 @@ class ClientController extends Controller
 
         try {
             $client = Client::findOrFail($id);
+
             $client->update($data);
 
-            return response()->json($client, 200);
+            return response()->json([
+                'message' => 'Cliente atualizado com sucesso!',
+                'data' => $client
+            ], 200);
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return response()->json(['message' => 'Cliente não encontrado!'], 404);
         } catch (\Exception $e) {
-            return response()->json(['message' => 'Falha ao atualizar cliente!'], 400);
+            return response()->json(['message' => 'Falha ao atualizar cliente!'], 500);
         }
     }
 
@@ -69,6 +78,13 @@ class ClientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $client = Client::findOrFail($id);
+            $client->delete();
+            return response()->json(['message' => 'Cliente removido com sucesso!'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Cliente não encontrado!'], 404);
+        }
+
     }
 }
