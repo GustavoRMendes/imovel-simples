@@ -34,7 +34,6 @@ class ClientController extends Controller
         } catch (\Exception $e) {
             return response()->json(['message' => 'Falha ao inserir cliente!'], 400);
         }
-
     }
 
     /**
@@ -59,7 +58,6 @@ class ClientController extends Controller
 
         try {
             $client = Client::findOrFail($id);
-
             $client->update($data);
 
             return response()->json([
@@ -83,8 +81,7 @@ class ClientController extends Controller
             $client->delete();
             return response()->json(['message' => 'Cliente removido com sucesso!'], 200);
         } catch (\Exception $e) {
-            return response()->json(['message' => 'Cliente não encontrado!'], 404);
+            return response()->json(['message' => 'Falha ao remover cliente!'], 404);
         }
-
     }
 }
